@@ -47,6 +47,18 @@
       "year": "2021",
       "photo": "https://picsum.photos/400/470",
       "id": 9
+    },
+    {
+      "artist": "from s",
+      "year": "1299",
+      "photo": "https://picsum.photos/400/437",
+      "id": 10
+    },
+    {
+      "artist": "cc",
+      "year": "cccc",
+      "photo": "https://picsum.photos/400/409",
+      "id": 11
     }
   ]
 }

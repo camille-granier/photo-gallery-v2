@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Form from './components/Form';
 import Card from './components/Card';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
 
 const App = () => {
 
   const dispatch = useDispatch();
-  const [picsData, setPicsData] = useState([]);
+  const picsData = useSelector((state) => state.pictures.pictures);
 
   useEffect(() => {
     axios

@@ -3,11 +3,14 @@ import { useRef, useState } from 'react';
 import axios from 'axios';
 import Delete from './Delete';
 import { FaRegEdit } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { editPicture } from '../Feature/pictures.slice';
 
 const Card = ({pic}) => {
 
     const [edit, setEdit] = useState(false);
     const artistInput = useRef();
+    const dispatch = useDispatch();
 
     const handleEdit = () => {
         setEdit(false);
@@ -17,7 +20,9 @@ const Card = ({pic}) => {
             year: pic.year,
             photo: pic.photo
         };
-        axios.put("http://localhost:5000/pictures/" + pic.id, data);
+        axios.put("http://localhost:5000/pictures/" + pic.id, data).then(() => {
+            dispatch(editPicture([data.artist, pic.id]));
+        });
     }
 
     return (

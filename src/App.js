@@ -3,15 +3,18 @@ import React from 'react';
 import axios from 'axios';
 import Form from './components/Form';
 import Card from './components/Card';
+import { useDispatch } from 'react-redux';
+import { setPicturesData } from './Feature/pictures.slice';
 
 const App = () => {
 
-  const [picsData, seetPicsData] = useState([]);
+  const dispatch = useDispatch();
+  const [picsData, setPicsData] = useState([]);
 
   useEffect(() => {
     axios
       .get('http://localhost:5000/pictures')
-      .then((res) => seetPicsData(res.data));
+      .then((res) => dispatch(setPicturesData(res.data)));
   }, [])
 
   return (

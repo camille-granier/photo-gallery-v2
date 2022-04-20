@@ -20,6 +20,7 @@ const App = () => {
 
   return (
     <>
+      <img className='logo' src="../public/pictures-logo.svg" alt="logo"/>
       <h1>Photo Gallery</h1>
       <Form />
       <div className='cards-container'>

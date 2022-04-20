@@ -2,10 +2,11 @@ import axios from "axios";
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addPicture } from "../Feature/pictures.slice";
+import { GrAdd } from "react-icons/gr";
 
 const Form = () => {
-  const inputArt = useRef();
-  const inputYear = useRef();
+
+  const inputTitle = useRef();
   const formRef = useRef();
   const dispatch = useDispatch();
 
@@ -13,8 +14,7 @@ const Form = () => {
     e.preventDefault();
 
     const data = {
-      artist: inputArt.current.value,
-      year: inputYear.current.value,
+      title: inputTitle.current.value,
       photo: `https://picsum.photos/400/${Math.round(
         Math.random() * 200 + 300
       )}`,
@@ -31,9 +31,10 @@ const Form = () => {
       <div className="form">
         <h2>Add a new photo</h2>
         <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
-          <input type="text" placeholder="Artist" ref={inputArt} />
-          <input type="text" placeholder="Year" ref={inputYear} />
-          <input type="submit" value="Send" />
+          <input type="text" placeholder="title" ref={inputTitle} />
+          <button type="submit" name="submit" >Add a new photo
+          <GrAdd />
+          </button>
         </form>
       </div>
     </div>

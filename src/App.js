@@ -15,6 +15,7 @@ const App = () => {
     axios
       .get('http://localhost:5000/pictures')
       .then((res) => dispatch(setPicturesData(res.data)));
+       // eslint-disable-next-line
   }, [])
 
   return (

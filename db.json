@@ -1,64 +1,54 @@
 {
   "pictures": [
     {
-      "artist": "caca",
-      "year": "2021",
-      "photo": "https://picsum.photos/400/352",
+      "title": "Photo 1",
+      "photo": "https://picsum.photos/400/484",
       "id": 1
     },
     {
-      "artist": "Kamau",
-      "year": "2005",
-      "photo": "https://picsum.photos/400/484",
+      "title": "Photo 2",
+      "photo": "https://picsum.photos/400/396",
+      "id": 2
+    },
+    {
+      "title": "Photo 3",
+      "photo": "https://picsum.photos/400/338",
       "id": 3
     },
     {
-      "artist": "Samedixs",
-      "year": "2010",
-      "photo": "https://picsum.photos/400/396",
+      "title": "Photo 4",
+      "photo": "https://picsum.photos/400/499",
       "id": 4
     },
     {
-      "artist": "Misan Harriman",
-      "year": "1999",
-      "photo": "https://picsum.photos/400/338",
+      "title": "Photo 5",
+      "photo": "https://picsum.photos/400/443",
       "id": 5
     },
     {
-      "artist": "Takeshi Nagano",
-      "year": "2017",
-      "photo": "https://picsum.photos/400/499",
+      "title": "Photo 6",
+      "photo": "https://picsum.photos/400/364",
       "id": 6
     },
     {
-      "artist": "Neil Burnell",
-      "year": "2012",
-      "photo": "https://picsum.photos/400/443",
+      "title": "Photo 7",
+      "photo": "https://picsum.photos/400/470",
       "id": 7
     },
     {
-      "artist": "Jidhun",
-      "year": "2009",
-      "photo": "https://picsum.photos/400/364",
+      "title": "Photo 8",
+      "photo": "https://picsum.photos/400/437",
       "id": 8
     },
     {
-      "artist": "Martin Grange",
-      "year": "2021",
-      "photo": "https://picsum.photos/400/470",
+      "title": "Photo 9",
+      "photo": "https://picsum.photos/400/409",
       "id": 9
     },
     {
-      "artist": "from s",
-      "year": "1299",
-      "photo": "https://picsum.photos/400/437",
-      "id": 10
-    },
-    {
-      "artist": "cc",
-      "year": "cccc",
+      "title": "Photo 10",
       "photo": "https://picsum.photos/400/409",
-      "id": 11
+      "id": 10
     }
   ]
 }

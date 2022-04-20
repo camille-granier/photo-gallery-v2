@@ -9,42 +9,40 @@ import { editPicture } from '../Feature/pictures.slice';
 const Card = ({pic}) => {
 
     const [edit, setEdit] = useState(false);
-    const artistInput = useRef();
+    const titleInput = useRef();
     const dispatch = useDispatch();
 
     const handleEdit = () => {
         setEdit(false);
 
         const data = {
-            artist: artistInput.current.value,
-            year: pic.year,
+            title: titleInput.current.value,
             photo: pic.photo
         };
         axios.put("http://localhost:5000/pictures/" + pic.id, data).then(() => {
-            dispatch(editPicture([data.artist, pic.id]));
+            dispatch(editPicture([data.title, pic.id]));
         });
     }
 
     return (
         <div className='card'>
-            <img src={pic.photo} alt={"picture of" + pic.artist} />
+            <img src={pic.photo} alt={"picture of" + pic.title} />
             <div className='infos'>
                 <div className='title'>
                     {edit?(
                         <div>
                             <input
-                            defaultValue={pic.artist}
-                            ref={artistInput}
-                            autofocus></input>
-                        <button onClick={() => handleEdit()}>Validate</button>
+                            defaultValue={pic.title}
+                            ref={titleInput}
+                            autoFocus></input>
+                        <button onClick={() => handleEdit()}>Confirm</button>
                         </div>
                     )
                     : (
                         <h3>
-                            {artistInput.current ? artistInput.current.value : pic.artist}
+                            {titleInput.current ? titleInput.current.value : pic.title}
                         </h3>
                     )}
-                <p>{pic.year}</p>
             </div>
             <div className='button-container'>
                 <div className='edit-icon' onClick={() => setEdit(!edit)}>

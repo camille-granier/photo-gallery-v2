@@ -14,10 +14,10 @@ export const picturesSlice = createSlice({
         },
         editPicture: (state, { payload }) => {
             state.pictures = state.pictures.map((pic) => {
-                if(pic.id = payload[1]){
+                if(pic.id === payload[1]){
                     return {
                         ...pic,
-                        artist: payload[0]
+                        title: payload[0]
                     }
                 } else {
                     return pic;

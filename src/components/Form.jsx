@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addPicture } from "../Feature/pictures.slice";
 import { GrAdd } from "react-icons/gr";
+const {v4 : uuidv4} = require('uuid');
 
 const Form = () => {
 
@@ -13,14 +14,17 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const newId = uuidv4()
+
     const data = {
       title: inputTitle.current.value,
       photo: `https://picsum.photos/400/${Math.round(
         Math.random() * 200 + 300
       )}`,
+      id: newId
     };
 
-    axios.post("http://localhost:5000/pictures", data).then(() => {
+    axios.post('http://localhost:5000/pictures', data).then(() => {
       dispatch(addPicture(data))
       formRef.current.reset();
     });

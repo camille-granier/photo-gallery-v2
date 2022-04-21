@@ -19,7 +19,7 @@ const Card = ({pic}) => {
             title: titleInput.current.value,
             photo: pic.photo
         };
-        axios.put("http://localhost:5000/pictures/" + pic.id, data).then(() => {
+        axios.put('http://localhost:5000/pictures' + pic.id, data).then(() => {
             dispatch(editPicture([data.title, pic.id]));
         });
     }

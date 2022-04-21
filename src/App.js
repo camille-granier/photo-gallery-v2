@@ -6,7 +6,6 @@ import Form from './components/Form';
 import Card from './components/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
-import { ReactComponent as Logo } from './assets/pictures-logo.svg';
 
 
 const App = () => {
@@ -15,15 +14,17 @@ const App = () => {
   const picsData = useSelector((state) => state.pictures.pictures);
 
   useEffect(() => {
-    axios
-      .get('http://localhost:5000/pictures')
-      .then((res) => dispatch(setPicturesData(res.data)));
-       // eslint-disable-next-line
-  }, [])
+       axios
+       .get('http://localhost:5000/pictures')
+       .then((res) => dispatch(setPicturesData(res.data)));
+         
+       
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <>
-      <Logo className="logo" height="20px"/>
+      <Header />
       <h1>Photo Gallery</h1>
       <Form />
       <div className='cards-container'>

@@ -1,10 +1,13 @@
 import { useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
+import Header from './components/Header';
 import Form from './components/Form';
 import Card from './components/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
+import { ReactComponent as Logo } from './assets/pictures-logo.svg';
+
 
 const App = () => {
 
@@ -20,7 +23,7 @@ const App = () => {
 
   return (
     <>
-      <img className='logo' src="../public/pictures-logo.svg" alt="logo"/>
+      <Logo className="logo" height="20px"/>
       <h1>Photo Gallery</h1>
       <Form />
       <div className='cards-container'>

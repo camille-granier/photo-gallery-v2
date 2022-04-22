@@ -1,9 +1,21 @@
 .header {
     display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
 }
 
 .icons {
+    margin: .625rem;
+    display: flex;
     a { 
     color: #000006;
+    padding: 0 .625rem;
     }
+}
+
+.logo {
+    margin: .625rem;
+    height: 1.5625rem;
+    width: 7.5rem;
 }

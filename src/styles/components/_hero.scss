@@ -1,4 +1,9 @@
 .hero {
     display: flex;
-    
+    margin: 6.25rem auto;
+    font-size: $font-lg;
+
+    h1 {
+        text-align: center;
+    }
 }

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
+import Hero from './components/Hero';
 import Form from './components/Form';
 import Card from './components/Card';
 import { useDispatch, useSelector } from 'react-redux';
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <h1>Photo Gallery</h1>
+      <Hero />
       <Form />
       <div className='cards-container'>
         {picsData?.map((pic, index) => (

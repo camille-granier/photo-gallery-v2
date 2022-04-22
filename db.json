@@ -2,48 +2,53 @@
   "pictures": [
     {
       "title": "Photo 1",
-      "photo": "https://picsum.photos/400/484",
+      "photo": "https://picsum.photos/300/402?grayscale",
       "id": 1
     },
     {
       "title": "Photo 2",
-      "photo": "https://picsum.photos/400/396",
+      "photo": "https://picsum.photos/300/402",
       "id": 2
     },
     {
       "title": "Photo 3",
-      "photo": "https://picsum.photos/400/338",
+      "photo": "https://picsum.photos/300/406",
       "id": 3
     },
     {
       "title": "Photo 4",
-      "photo": "https://picsum.photos/400/499",
+      "photo": "https://picsum.photos/300/404",
       "id": 4
     },
     {
       "title": "Photo 5",
-      "photo": "https://picsum.photos/400/443",
+      "photo": "https://picsum.photos/300/408",
       "id": 5
     },
     {
       "title": "Photo 6",
-      "photo": "https://picsum.photos/400/364",
+      "photo": "https://picsum.photos/300/410",
       "id": 6
     },
     {
       "title": "Photo 7",
-      "photo": "https://picsum.photos/400/470",
+      "photo": "https://picsum.photos/300/398",
       "id": 7
     },
     {
       "title": "Photo 8",
-      "photo": "https://picsum.photos/400/437",
+      "photo": "https://picsum.photos/300/405",
       "id": 8
     },
     {
       "title": "Photo 9",
-      "photo": "https://picsum.photos/400/409",
+      "photo": "https://picsum.photos/300/412",
       "id": 9
+    },
+    {
+      "title": "Photo 10",
+      "photo": "https://picsum.photos/300/414",
+      "id": 10
     }
   ]
 }

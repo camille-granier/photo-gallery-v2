@@ -26,7 +26,7 @@ const Card = ({pic}) => {
 
     return (
         <div className='card'>
-            <img src={pic.photo} alt={"picture of" + pic.title} />
+            <img src={pic.photo} alt={"picture name:" + pic.title} />
             <div className='infos'>
                 <div className='title'>
                     {edit?(

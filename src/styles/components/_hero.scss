@@ -1,6 +1,10 @@
 .hero {
-    display: flex;
-    margin: 6.25rem auto;
+
+    @include breakpoint-up(large){
+        display: flex;
+    }
+
+    
     font-size: $font-lg;
 
     h1 {
@@ -8,7 +12,12 @@
     }
 }
 
-.picture1 {
-    height: 25rem;
-        width: 18.75rem;
+.arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.right-arrow {
+    right: 32px;
 }

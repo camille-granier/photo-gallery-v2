@@ -12,12 +12,20 @@
     }
 }
 
+.photo-slider {
+    display: flex;
+    align-items: center;
+}
+
 .arrow {
-    position: absolute;
-    top: 50%;
     cursor: pointer;
+    color: white;
 }
 
 .right-arrow {
-    right: 32px;
+    
+}
+
+.slide-active {
+    text-align: center;
 }

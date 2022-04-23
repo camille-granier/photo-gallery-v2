@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
@@ -11,23 +11,28 @@ import { setPicturesData } from './Feature/pictures.slice';
 
 const App = () => {
 
+  const [lengthPics, setLengthPics] = useState(0);
   const dispatch = useDispatch();
   const picsData = useSelector((state) => state.pictures.pictures);
 
-  useEffect(() => {
-       axios
+  const getPictures = () => {
+    axios
        .get('http://localhost:5000/pictures')
-       .then((res) => dispatch(setPicturesData(res.data)));
-         
-       
-    //eslint-disable-next-line
+       .then((res) => dispatch(setPicturesData(res.data)) )          
+        .then((res) => setLengthPics(res.data));
+  }
+
+  useEffect(() => {
+
+  getPictures();
+  //eslint-disable-next-line
   }, []);
 
   return (
     <>
       <Header />
-      <Hero />
-      <Form />
+      <Hero lengthPics={lengthPics} getPictures={getPictures}/>
+      <Form getPictures={getPictures}/>
       <div className='cards-container'>
         {picsData?.map((pic, index) => (
           <Card key={index} pic={pic} />

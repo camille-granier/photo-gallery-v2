@@ -5,7 +5,7 @@ import { addPicture } from "../Feature/pictures.slice";
 import { GrAdd } from "react-icons/gr";
 const {v4 : uuidv4} = require('uuid');
 
-const Form = () => {
+const Form = ({getPictures}) => {
 
   const inputTitle = useRef();
   const formRef = useRef();

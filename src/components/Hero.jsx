@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
 const Hero = () => {
 
@@ -26,7 +26,7 @@ const Hero = () => {
       <section className="hero">
         <h1>Get inspired today</h1>
         <div className='photo-slider'>
-          <FaArrowAltCircleLeft className='left-arrow arrow' onClick={prevSlide} />
+          <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
           {picsData?.map((pic, index) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }
@@ -34,7 +34,7 @@ const Hero = () => {
             {index === current && (<img src={pic.photo} alt={index} key={index}/>)}
             </div>
           )})}
-          <FaArrowAltCircleRight className='right-arrow arrow' onClick={nextSlide} />
+          <FiArrowRight className='right-arrow arrow' onClick={nextSlide} />
         </div>
       </section>
     );

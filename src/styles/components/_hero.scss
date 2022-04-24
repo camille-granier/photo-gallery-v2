@@ -1,7 +1,23 @@
 .hero {
 
-    @include breakpoint-up(large){
+    margin-top: 6.875rem;
+
+    @include breakpoint-up(medium){
+        height: 100vh;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include breakpoint-up(large){
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: .625rem;
+    }
+    @include breakpoint-up(xlarge){
+        justify-content: center;
+        font-size: $font-xlg;
     }
 
     
@@ -9,26 +25,62 @@
 
     h1 {
         text-align: center;
+
+        @include breakpoint-up(medium) {
+            padding: 3.125rem;
+        }
     }
 }
 
 .photo-slider {
     display: flex;
+    justify-content: center;
     align-items: center;
 
     img {
         height: 25rem;
         width: 18.75rem;
+        border-radius: 2px;
     }
+
+    @include breakpoint-up(medium){
+        padding: 3.125rem;
+
+        img {
+            height: 29rem;
+            width: 19rem;
+        }
+    }
+    @include breakpoint-up(large){
+        align-self: end;
+    }
+    @include breakpoint-up(xlarge){
+        align-self: center;
+        margin-left: 9.375rem;
+        margin-top: 6.25rem;
+        img {
+            height: 33rem;
+            width: 23rem;
+        }
+    }
+
 }
 
 .arrow {
+    
     cursor: pointer;
-    color: white;
+    color: $black;
+    @include breakpoint-up(medium){
+        margin: 1.875rem;
+    }
 }
 
 .right-arrow {
-    
+    padding-left: .625rem;
+}
+
+.left-arrow {
+    padding-right: .625rem;
 }
 
 .slide-active {

@@ -5,7 +5,7 @@ import { addPicture } from "../Feature/pictures.slice";
 import { GrAdd } from "react-icons/gr";
 const {v4 : uuidv4} = require('uuid');
 
-const Form = ({getPictures}) => {
+const Form = () => {
 
   const inputTitle = useRef();
   const formRef = useRef();
@@ -18,8 +18,8 @@ const Form = ({getPictures}) => {
 
     const data = {
       title: inputTitle.current.value,
-      photo: `https://picsum.photos/400/${Math.round(
-        Math.random() * 200 + 300
+      photo: `https://picsum.photos/400/${Math.floor((
+        Math.random() * 410) + 380
       )}`,
       id: newId
     };

@@ -2,18 +2,23 @@ import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const Hero = ({lengthPics, getPictures}) => {
+const Hero = () => {
 
  
-  const picsData = useSelector((state) => state.pictures.pictures)
+  const picsData = useSelector((state) => state.pictures.pictures);
+  const [lengthPics, setLengthPics] = useState(3);
   const [current, setCurrent] = useState(0);
 
 
   const nextSlide = () => {
-    setCurrent(current === lengthPics - 1 ? 0 : current + 1)
+    setLengthPics(picsData.length);
+    setCurrent(current === lengthPics - 1 ? 0 : current + 1);
+    console.log(lengthPics)
+    console.log(current)
   };
 
   const prevSlide = () => {
+    setLengthPics(picsData.length);
     setCurrent(current === 0 ? lengthPics - 1 : current - 1)
   }
 

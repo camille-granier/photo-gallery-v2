@@ -15,6 +15,11 @@
 .photo-slider {
     display: flex;
     align-items: center;
+
+    img {
+        height: 25rem;
+        width: 18.75rem;
+    }
 }
 
 .arrow {

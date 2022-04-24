@@ -1,5 +1,5 @@
 .hero {
-
+    background-color: 	#ddd8d5;
     margin-top: 6.875rem;
 
     @include breakpoint-up(medium){
@@ -28,6 +28,12 @@
 
         @include breakpoint-up(medium) {
             padding: 3.125rem;
+            padding-left: 6.25rem;
+        }
+        @include breakpoint-up(large) {
+            
+                font-size: $font-hero;
+            
         }
     }
 }
@@ -83,6 +89,13 @@
     padding-right: .625rem;
 }
 
+.slide {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
 .slide-active {
     text-align: center;
+    opacity: 1;
+    transition: 1s ease-in-out;
 }

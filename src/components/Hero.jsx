@@ -6,20 +6,20 @@ const Hero = () => {
 
  
   const picsData = useSelector((state) => state.pictures.pictures);
-  const [lengthPics, setLengthPics] = useState(3);
+  const [lengthPics, setLengthPics] = useState(2);
   const [current, setCurrent] = useState(0);
 
 
   const nextSlide = () => {
-    setLengthPics(picsData.length);
     setCurrent(current === lengthPics - 1 ? 0 : current + 1);
     console.log(lengthPics)
     console.log(current)
+    setLengthPics(picsData.length);
   };
 
   const prevSlide = () => {
+    setCurrent(current === 0 ? lengthPics - 1 : current - 1);
     setLengthPics(picsData.length);
-    setCurrent(current === 0 ? lengthPics - 1 : current - 1)
   }
 
    return (

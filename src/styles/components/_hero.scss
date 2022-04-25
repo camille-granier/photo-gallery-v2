@@ -1,11 +1,13 @@
 .hero {
-    background-color: 	#ddd8d5;
-    margin-top: 6.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.25rem;
+    height: 100vh;
 
     @include breakpoint-up(medium){
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
+        margin-top: 6.875rem;
         justify-content: center;
         align-items: center;
     }
@@ -21,14 +23,17 @@
     }
 
     
-    font-size: $font-lg;
+    font-size: $font-md;
 
     h1 {
         text-align: center;
+        width: 18.75rem;
 
         @include breakpoint-up(medium) {
+            font-size: $font-xlg;
+            width: 100%;
             padding: 3.125rem;
-            padding-left: 6.25rem;
+            
         }
         @include breakpoint-up(large) {
             

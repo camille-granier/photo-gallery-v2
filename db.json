@@ -49,21 +49,6 @@
       "title": "Photo 10",
       "photo": "https://picsum.photos/300/414",
       "id": 10
-    },
-    {
-      "title": "cc",
-      "photo": "https://picsum.photos/400/469",
-      "id": "67648160-8b85-40d4-8b7f-9e148927e623"
-    },
-    {
-      "title": "jj",
-      "photo": "https://picsum.photos/400/762",
-      "id": "d78f3e6b-166b-4143-91d8-c1c600be8c7e"
-    },
-    {
-      "title": "pp",
-      "photo": "https://picsum.photos/400/613",
-      "id": "4a671cd0-a169-42c7-98d0-ad757ab7d8b9"
     }
   ]
 }

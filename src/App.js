@@ -3,8 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Form from './components/Form';
-import Card from './components/Card';
+import PhotoGallery from './components/PhotoGallery';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
 
@@ -33,13 +32,8 @@ const App = () => {
     <>
       <Header />
       <Hero />
-      <Form />
-      <div className='cards-container'>
-        {picsData?.map((pic, index) => (
-          <Card key={index} pic={pic} />
-          )
-        )}
-      </div>
+      <PhotoGallery />
+      
     </>
   );
 };

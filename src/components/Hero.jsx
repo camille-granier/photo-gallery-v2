@@ -31,7 +31,7 @@ const Hero = () => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }
                    key={index}>
-            {index === current && (<img src={pic.photo} alt={index} key={index}/>)}
+            <img src={pic.photo} alt={index} key={index}/>
             </div>
           )})}
           <FiArrowRight className='right-arrow arrow' onClick={nextSlide} />

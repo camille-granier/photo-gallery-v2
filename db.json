@@ -21,8 +21,18 @@
       "id": 4
     },
     {
-      "title": "Photo 7",
+      "title": "Photo 5",
+      "photo": "https://picsum.photos/300/396",
+      "id": 5
+    },
+    {
+      "title": "Photo 6",
       "photo": "https://picsum.photos/300/398",
+      "id": 6
+    },
+    {
+      "title": "Photo 7",
+      "photo": "https://picsum.photos/300/402",
       "id": 7
     },
     {
@@ -34,11 +44,6 @@
       "title": "Photo 9",
       "photo": "https://picsum.photos/300/412",
       "id": 9
-    },
-    {
-      "title": "Photo 10",
-      "photo": "https://picsum.photos/300/414",
-      "id": 10
     }
   ]
 }

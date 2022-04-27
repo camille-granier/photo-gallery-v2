@@ -8,9 +8,8 @@ const Header = () => {
             <div className='header-container'>
                 <Logo className="logo" height="20px"/>    
                 <div className="icons">
-                    <a className="portfolio" href="#"></a>
-                    <a className="github" href="#"><FiGithub/></a>
-                    <a className="email" href="#"><FiAtSign/></a>
+                    <a className="github" href="https://github.com/camille-granier" rel="noreferrer" target="_blank"><FiGithub/></a>
+                    <a className="email" href="#contact" target="_blank"><FiAtSign/></a>
                 </div>
             </div>
         </header>

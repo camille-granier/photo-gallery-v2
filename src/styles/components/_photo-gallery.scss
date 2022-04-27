@@ -68,15 +68,29 @@ form {
             font-size: $font-md;
         }
     }
+
+    @include breakpoint-up(large){
+        padding-bottom: 2.5rem;
+    }
 }
 
 
 .photo-gallery {
-    background-color: #d6d0c8;
+   
+    background-color: $white;
+    padding: 0px;
+    margin: 0px;
+
+    @include breakpoint-up(large){
+        padding-right: 5rem;
+        padding-left: 5rem;
+        padding-top: 1.875rem;
+        
+    }
 
     .infos {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         text-align: center;
         margin-bottom: 1.5625rem;

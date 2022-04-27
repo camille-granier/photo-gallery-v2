@@ -4,6 +4,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PhotoGallery from './components/PhotoGallery';
+import Contact from './components/Contact';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
 
@@ -33,7 +34,7 @@ const App = () => {
       <Header />
       <Hero />
       <PhotoGallery />
-      
+      <Contact />
     </>
   );
 };

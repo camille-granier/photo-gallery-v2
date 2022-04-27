@@ -11,4 +11,10 @@
         height: 25rem;
         width: 18.75rem;
     }
+
+    @include breakpoint-up(medium) {
+        img {
+            padding: 1.25rem;
+        }
+    }
 }

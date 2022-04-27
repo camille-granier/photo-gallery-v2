@@ -5,6 +5,10 @@
     padding: .625rem;
     margin: auto;
 
+    @include breakpoint-up(medium){
+        width: 22rem;
+        font-size: $font-lg;
+    }
     input {
         color: $black;
         background-color: transparent;
@@ -12,6 +16,7 @@
         border: none;
         border-bottom: solid 1px $black;
         max-width: 50%;
+
     }
 
     input:focus {
@@ -27,8 +32,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -52,6 +57,17 @@ form {
     align-items: center;
     text-align: center;
     max-width: 18.75rem;
+
+    @include breakpoint-up(medium){
+        max-width: 22rem;
+
+        input {
+            font-size: $font-md;
+        }
+        button {
+            font-size: $font-md;
+        }
+    }
 }
 
 
@@ -64,6 +80,10 @@ form {
         align-items: center;
         text-align: center;
         margin-bottom: 1.5625rem;
+        @include breakpoint-up(medium) {
+            padding: 0px 1.25rem;
+            max-width: 18.75rem;
+        }
     }
 
     .title {
@@ -117,6 +137,13 @@ form {
     .edit-edit-container {
         padding-top: 1.2rem;
         margin-bottom: 1.5625rem;
+
+        @include breakpoint-up(medium){
+           input {
+            max-width: 6.25rem;
+           } 
+        }
+       
     }
 
     .edit-button-container {
@@ -126,6 +153,7 @@ form {
         align-items: center;
         justify-content: center;
         text-align: center;
+        
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

@@ -1,6 +1,52 @@
 .contact {
     background-color: $contact;
-    height: 100vh;
-   
-    
+    min-height: 100vh;
+    font-family: $rosario;
+    font-size: $font-md;
+    padding: 1.25rem;
+
+    @include breakpoint-up(medium){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5rem;
+    }
+    @include breakpoint-up(mlarge){
+        padding: 6.25rem;
+    }
+
+    h2 {
+        font-size: $font-xlg;
+        padding-top: 10rem;
+        @include breakpoint-up(medium) {
+            padding-top: 7rem;
+            font-size: $font-hero;
+        }
+        @include breakpoint-up(medium) {
+            padding-top: 10rem;
+        }
+    }
+
+    .links {
+        padding-top: 5rem;
+        @include breakpoint-up(medium){
+            padding-top: 3rem;
+            padding-left: 3rem;
+        }
+    }
+
+    .email-span{
+        padding-bottom: .625rem;
+        border-bottom: solid 1px $black;
+    }
+
+    .github-link{
+        text-decoration: none;
+        color: $black;
+    }
+
+    .dev {
+        padding-top: 5rem;
+        font-size: 1.25rem;
+    }
 }

@@ -1,3 +1,117 @@
+.form {
+    font-family: $roboto;
+    text-align: center;
+    width: 18.75rem;
+    padding: .625rem;
+    margin: auto;
+
+    input {
+        color: $black;
+        background-color: transparent;
+        margin-right: 1.25rem;
+        border: none;
+        border-bottom: solid 1px $black;
+        max-width: 50%;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    button {
+        margin-left: .625rem;
+        text-align: center;
+        background-color: transparent;
+        border: solid 1px $black;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+
+    }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $black;
+            opacity: 1; /* Firefox */
+          }
+          
+          :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $black;
+          }
+          
+          ::-ms-input-placeholder { /* Microsoft Edge */
+            color: $black;
+          }
+    
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 18.75rem;
+}
+
+
 .photo-gallery {
     background-color: #d6d0c8;
+
+    .infos {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1.5625rem;
+    }
+
+    .title {
+        font-family: $roboto;
+    }
+
+    .button-container {
+        display: flex;
+        align-items: center;
+    }
+    .edit-icon {
+        padding-left: .625rem;
+    }
+
+    .delete-icon {
+        padding-left: .625rem;
+    }
+
+    .button-edit {
+        font-family: $roboto;
+        background-color: transparent;
+        color: $black;
+        border: solid 1px $black;
+    }
+    input {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px $black;
+        margin-right: 1.25rem;
+    }
+    input:focus {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 1px $black;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $black;
+        opacity: 1; /* Firefox */
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $black;
+      }
+      
+      ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $black;
+      }
 }

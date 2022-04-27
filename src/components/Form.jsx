@@ -36,7 +36,7 @@ const Form = () => {
         <h2>Add a new photo</h2>
         <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
           <input type="text" placeholder="title" ref={inputTitle} />
-          <button type="submit" name="submit" >Add a new photo
+          <button type="submit" name="submit" >
           <GrAdd />
           </button>
         </form>

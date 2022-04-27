@@ -19,7 +19,7 @@ const Card = ({pic}) => {
             title: titleInput.current.value,
             photo: pic.photo
         };
-        axios.put('http://localhost:5000/pictures' + pic.id, data).then(() => {
+        axios.put('http://localhost:5000/pictures/' + pic.id, data).then(() => {
             dispatch(editPicture([data.title, pic.id]));
         });
     }
@@ -35,7 +35,7 @@ const Card = ({pic}) => {
                             defaultValue={pic.title}
                             ref={titleInput}
                             autoFocus></input>
-                        <button onClick={() => handleEdit()}>Confirm</button>
+                        <button className="button-edit" onClick={() => handleEdit()}>Confirm</button>
                         </div>
                     )
                     : (

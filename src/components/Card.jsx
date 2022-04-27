@@ -30,11 +30,12 @@ const Card = ({pic}) => {
             <div className='infos'>
                 <div className='title'>
                     {edit?(
-                        <div>
+                        <div className={!edit ? 'edit-container' : "edit-edit-container"}>
                             <input
                             defaultValue={pic.title}
                             ref={titleInput}
-                            autoFocus></input>
+                            autoFocus
+                            ></input>
                         <button className="button-edit" onClick={() => handleEdit()}>Confirm</button>
                         </div>
                     )
@@ -44,7 +45,7 @@ const Card = ({pic}) => {
                         </h3>
                     )}
             </div>
-            <div className='button-container'>
+            <div className={!edit ? 'button-container' : "edit-button-container"}>
                 <div className='edit-icon' onClick={() => setEdit(!edit)}>
                         <FaRegEdit />
                 </div>

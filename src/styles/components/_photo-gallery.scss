@@ -29,7 +29,6 @@
         align-items: center;
         width: 2rem;
         height: 2rem;
-
     }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -69,18 +68,30 @@ form {
 
     .title {
         font-family: $roboto;
+        font-size: 1rem;
     }
+
 
     .button-container {
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .edit-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-left: .625rem;
+        font-size: 1.20rem;
     }
 
     .delete-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-left: .625rem;
+        font-size: 1.20rem;
     }
 
     .button-edit {
@@ -102,6 +113,21 @@ form {
         border: none;
         border-bottom: solid 1px $black;
     }
+
+    .edit-edit-container {
+        padding-top: 1.2rem;
+        margin-bottom: 1.5625rem;
+    }
+
+    .edit-button-container {
+        padding-top: 1.2rem;
+        margin-bottom: 1.5625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: $black;
         opacity: 1; /* Firefox */

@@ -1,6 +1,6 @@
 .contact {
     background-color: $contact;
-    min-height: 100vh;
+    height: 100vh;
     font-family: $rosario;
     font-size: $font-md;
     padding: 1.25rem;
@@ -11,8 +11,8 @@
         justify-content: space-between;
         padding: 5rem;
     }
-    @include breakpoint-up(mlarge){
-        padding: 6.25rem;
+    @include breakpoint-up(large){
+        padding: 6.20rem;
     }
 
     h2 {
@@ -22,8 +22,8 @@
             padding-top: 7rem;
             font-size: $font-hero;
         }
-        @include breakpoint-up(medium) {
-            padding-top: 10rem;
+        @include breakpoint-up(large) {
+            padding-top: 1rem;
         }
     }
 

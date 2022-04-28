@@ -3,11 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
     height: 100vh;
     max-height: 100vh;
     background-color: $neutral-pink;
     @include breakpoint-up(medium){
-        margin-top: 6.875rem;
+        padding-top: 6.875rem;
         justify-content: center;
         align-items: center;
     }
@@ -15,7 +16,7 @@
     @include breakpoint-up(large){
         flex-direction: row;
         justify-content: space-between;
-        margin-top: .625rem;
+        padding-top: .625rem;
     }
     @include breakpoint-up(xlarge){
         justify-content: center;

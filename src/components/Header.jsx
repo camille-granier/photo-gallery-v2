@@ -9,7 +9,14 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='header-container'>
-                <Logo className="logo" height="20px"/>    
+                <div className='Logo-container'>
+                    <button
+                     onClick={() => {
+                         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                                 }}>
+                        <Logo className="logo" height="20px"/>
+                     </button>
+                </div>
                 <div className="icons">
                     <a className="github" href="https://github.com/camille-granier" rel="noreferrer" target="_blank"><FiGithub/></a>
                     <Link className="email" 

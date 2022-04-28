@@ -6,6 +6,12 @@
     width: 100%;
     max-height: 5rem;
     z-index: 4;
+
+    button {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
 }
 
 .header-container {

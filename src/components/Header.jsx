@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../assets/pictures-logo.svg';
 import { FiGithub, FiAtSign } from "react-icons/fi";
-import {Link, animateScroll as scroll } from "react-scroll";
+import {Link} from "react-scroll";
 
 const Header = () => {
 

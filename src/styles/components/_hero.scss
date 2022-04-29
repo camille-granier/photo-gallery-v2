@@ -7,6 +7,9 @@
     height: 100vh;
     max-height: 100vh;
     background-color: $neutral-pink;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    
     @include breakpoint-up(medium){
         padding-top: 6.875rem;
         justify-content: center;

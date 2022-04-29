@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import Form from './Form';
 import Card from './Card';
 
-const PhotoGallery = () => {
+const PhotoGallery = ({refProps}) => {
 
     const picsData = useSelector((state) => state.pictures.pictures);
 
     return (
-        <div className='photo-gallery'>
+        <section ref={refProps} className='photo-gallery'>
             <Form/>
             <div className='cards-container'>
         {picsData?.map((pic, index) => (
@@ -16,7 +16,7 @@ const PhotoGallery = () => {
           )
         )}
       </div>
-        </div>
+        </section>
     );
 };
 

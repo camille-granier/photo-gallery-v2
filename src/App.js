@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
@@ -12,10 +12,28 @@ import { setPicturesData } from './Feature/pictures.slice';
 const App = () => {
 
   const dispatch = useDispatch();
+  //eslint-disable-next-line
   const picsData = useSelector((state) => state.pictures.pictures);
 
+  const [heroIsVisible, setHeroIsVisible] = useState();
 
+  const photoRef = useRef();
+  const heroRef = useRef();
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+    const entry = entries[0];
+    setHeroIsVisible(entry.isIntersecting);
+    });
+    observer.observe(heroRef.current);
+  }, []);
+
+  const handleScroll = () => {
+    if(heroIsVisible){
+    console.log('scrolling');
+    photoRef.current.scrollIntoView({behavior: "smooth"})
+    }
+  }
 
   const getPictures = () => {
     axios
@@ -29,11 +47,21 @@ const App = () => {
   //eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+     window.addEventListener("scroll", handleScroll);
+    
+   return() => {
+     console.log('not scrolling')
+     window.removeEventListener("scroll", handleScroll)
+  }
+  }, [heroIsVisible]);
+
+
   return (
     <>
       <Header />
-      <Hero />
-      <PhotoGallery />
+      <div ref={heroRef}><Hero  handleScroll={handleScroll}/></div>
+      <PhotoGallery refProps={photoRef}/>
       <Contact />
     </>
   );

@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 
-const Hero = () => {
+const Hero = ({handleScroll}) => {
 
- 
+  const heroRef = useRef();
   const picsData = useSelector((state) => state.pictures.pictures);
   const [lengthPics, setLengthPics] = useState(2);
   const [current, setCurrent] = useState(0);
@@ -12,8 +12,6 @@ const Hero = () => {
 
   const nextSlide = () => {
     setCurrent(current === lengthPics - 1 ? 0 : current + 1);
-    console.log(lengthPics)
-    console.log(current)
     setLengthPics(picsData.length);
   };
 
@@ -21,9 +19,11 @@ const Hero = () => {
     setCurrent(current === 0 ? lengthPics - 1 : current - 1);
     setLengthPics(picsData.length);
   }
+ 
+
 
    return (
-      <section className="hero">
+      <section className="hero" ref={heroRef}>
         <h1>Get inspired today</h1>
         <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />

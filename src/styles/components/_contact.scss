@@ -29,6 +29,9 @@
 
     .links {
         padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         @include breakpoint-up(medium){
             padding-top: 3rem;
             padding-left: 3rem;
@@ -36,13 +39,13 @@
     }
 
     .email-span{
-        padding-bottom: .625rem;
+        padding-bottom: .620rem;
         border-bottom: solid 1px $black;
     }
 
     .github-link{
-        text-decoration: none;
         color: $black;
+        margin-top: 1.25rem;
     }
 
     .dev {

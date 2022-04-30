@@ -15,7 +15,11 @@ body {
     color: $black;
     background-color: $white;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-behavior: smooth;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
 }
 

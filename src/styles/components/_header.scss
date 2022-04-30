@@ -34,7 +34,14 @@
     a { 
     color: $black;
     padding: 0 .625rem;
+    opacity: 1;
+    transition: 300ms ease-in-out;
     }
+
+    a:hover {
+        opacity: .7;
+    }
+
     .email {
         color: $black;
         padding: 0 .625rem;

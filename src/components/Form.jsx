@@ -37,7 +37,7 @@ const Form = () => {
         <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
           <input type="text" placeholder="title" ref={inputTitle} />
           <button type="submit" name="submit" >
-          <GrAdd />
+          <GrAdd className="plus"/>
           </button>
         </form>
       </div>

@@ -1,3 +1,7 @@
+.form-container {
+    padding: 1.875rem;
+}
+
 .form {
     font-family: $roboto;
     text-align: center;
@@ -34,6 +38,12 @@
         align-items: center;
         width: 1.5rem;
         height: 1.5rem;
+        cursor: pointer;
+        transition: 300ms ease-in-out;
+    }
+
+    button:hover {
+        background-color: $neutral-pink;
     }
 
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -119,6 +129,7 @@ form {
         align-items: center;
         padding-left: .625rem;
         font-size: 1.20rem;
+        cursor: pointer;
     }
 
     .delete-icon {
@@ -127,6 +138,7 @@ form {
         align-items: center;
         padding-left: .625rem;
         font-size: 1.20rem;
+        cursor: pointer;
     }
 
     .button-edit {
@@ -134,6 +146,7 @@ form {
         background-color: transparent;
         color: $black;
         border: solid 1px $black;
+        cursor: pointer;
     }
     input {
         outline: none;

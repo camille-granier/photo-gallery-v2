@@ -130,6 +130,12 @@ form {
         padding-left: .625rem;
         font-size: 1.20rem;
         cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+    .edit-icon:hover {
+        //color: $neutral-pink;
+        transform: translateY(-3px);
+        opacity: .85;
     }
 
     .delete-icon {
@@ -139,6 +145,13 @@ form {
         padding-left: .625rem;
         font-size: 1.20rem;
         cursor: pointer;
+        transition: all 300ms ease-in-out;
+    }
+
+    .delete-icon:hover {
+        //color: $neutral-pink;
+        transform: translateY(-3px);
+        opacity: .85;
     }
 
     .button-edit {
@@ -146,8 +159,16 @@ form {
         background-color: transparent;
         color: $black;
         border: solid 1px $black;
+        border-radius: 2px;
         cursor: pointer;
+        transition: all 300ms ease-in-out;
     }
+    .button-edit:hover {
+        background-color: $black;
+        color: $neutral-pink;
+        opacity: .95;
+    }
+    
     input {
         outline: none;
         background-color: transparent;

@@ -45,11 +45,52 @@
 
     .github-link{
         color: $black;
-        margin-top: 1.25rem;
+        margin-top: 2.4rem;
+        height: 1.875rem;
+        display: flex;
+        align-items: center;
+        line-height: 1.1;
     }
 
     .dev {
         padding-top: 5rem;
         font-size: 1.25rem;
     }
+}
+
+.mask {
+    position: relative;
+    padding: 0;
+    height: 2.09rem;
+    overflow: hidden;
+}
+
+.github-title {
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.link-title-1 {
+    transform-origin: right center;
+}
+
+.link-title-2 {
+    transform-origin: left center;
+    transform: rotate(15deg);
+}
+
+.github-link-container {
+    transition: transform 0.4s ease;
+}
+
+.github-link:hover .github-link-container{
+    transform: translateY(-25px);
+}
+
+.github-link:hover .link-title-1 {
+    transform: rotate(20deg);
+}
+
+.github-link:hover .link-title-2 {
+    transform: rotate(0);
 }

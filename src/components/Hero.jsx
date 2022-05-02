@@ -28,10 +28,10 @@ const Hero = ({loading}) => {
    return (
       <section className="hero">
         <h1>Get inspired today</h1>
-         {!photoRef.current && !loading 
-         ? <div className='photo-slider'>
+           <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
-          {picsData?.map((pic, index) => {
+          {(!photoRef.current && loading) && <div className='loading slide-active'></div>}
+           {picsData?.map((pic, index) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }
                    key={index}>
@@ -40,9 +40,6 @@ const Hero = ({loading}) => {
           )})}
           <FiArrowRight className='right-arrow arrow' onClick={nextSlide} />
         </div>
-        : <div className='photo-slider'>
-          <img className='slide-active' alt='placeholder-waiting' src='default-pic.png'/>
-          </div>}
       </section>
     );
 };

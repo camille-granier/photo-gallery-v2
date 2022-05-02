@@ -120,3 +120,18 @@
     grid-row: 1 / 3;
     
 }
+
+.loading {
+    height: 25rem;
+    width: 18.75rem;
+
+    @include breakpoint-up(medium) {
+        height: 29rem;
+        width: 21rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        height: 33rem;
+        width: 23rem;
+    }
+}

@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense  } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import PhotoGallery from './components/PhotoGallery';
 import Contact from './components/Contact';
 import { useDispatch, useSelector } from 'react-redux';
 import { setPicturesData } from './Feature/pictures.slice';
 
+const PhotoGallery = lazy(() => import(/* webpackChunkName: "PhotoGallery" */ "./components/PhotoGallery"));
 
 const App = () => {
 
@@ -32,7 +32,9 @@ const App = () => {
     <>
       <Header />
       <Hero />
-      <PhotoGallery />
+      <Suspense fallback={<div>loading...</div>}>
+        <PhotoGallery />
+      </Suspense>
       <Contact />
     </>
   );

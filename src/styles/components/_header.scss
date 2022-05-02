@@ -40,6 +40,7 @@
 
     a:hover {
         opacity: .7;
+        transform: translateY(-4px);
     }
 
     .email {
@@ -52,5 +53,10 @@
 .logo {
     height: 1.5625rem;
     width: 7.5rem;
+    transition: 200ms ease-in-out;
+}
+
+.logo:hover {
+    transform: translateY(-3px);
 }
 

@@ -7,7 +7,6 @@ const Hero = ({loading}) => {
   const picsData = useSelector((state) => state.pictures.pictures);
   const [lengthPics, setLengthPics] = useState(2);
   const [current, setCurrent] = useState(0);
-  const [photoVisible, setPhotoVisible] = useState(false);
   const photoRef = useRef();
 
   console.log(photoRef.current)
@@ -30,7 +29,10 @@ const Hero = ({loading}) => {
         <h1>Get inspired today</h1>
            <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
-          {(!photoRef.current && loading) && <div className='loading slide-active'></div>}
+          {(!photoRef.current && loading) && 
+          <div className='slide-active'>
+            <img className='loading-image' src='/assets/default.jpg' alt='default' />
+            </div>}
            {picsData?.map((pic, index) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }

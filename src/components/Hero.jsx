@@ -35,7 +35,7 @@ const Hero = ({loading}) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }
                    key={index}>
-            <img ref={photoRef} src={pic.photo} alt={index} key={index}/>
+            <img ref={photoRef} src={pic.photo} alt={"photo " + index} key={index}/>
             </div>
           )})}
           <FiArrowRight className='right-arrow arrow' onClick={nextSlide} />

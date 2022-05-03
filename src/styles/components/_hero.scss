@@ -32,6 +32,7 @@
         width: 18.5rem;
         padding: 1.625rem 0px;
         font-family: $rosario;
+        animation: text 1s ease-in-out;
 
         @include breakpoint-up(medium) {
             font-size: $font-xlg;
@@ -47,6 +48,14 @@
     }
 }
 
+@keyframes text{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 .photo-slider {
     display: grid;
     justify-content: center;
@@ -92,6 +101,10 @@
     @include breakpoint-up(medium){
         margin: 0px 1.875rem;
     }
+}
+
+.arrow:hover {
+    color: #585655;
 }
 
 .right-arrow {

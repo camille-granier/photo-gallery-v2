@@ -30,8 +30,7 @@ const Hero = ({loading}) => {
         <h1>Get inspired today</h1>
            <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
-           
-            <Loader />
+           {(!photoRef.current && loading) && <Loader />}
            {picsData?.map((pic, index) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }

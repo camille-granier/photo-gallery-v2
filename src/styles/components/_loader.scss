@@ -22,7 +22,7 @@
     width: 0%;
     height: .1rem;
     z-index: 0;
-    animation: line 3s ease infinite;
+    animation: line 1s ease infinite;
 }
 
 @keyframes line {
@@ -31,6 +31,6 @@
     }
 
     100% {
-        width: 80%;
+        width: 100%;
     }
 }

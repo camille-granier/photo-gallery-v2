@@ -2,6 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 25rem;
+    width: 18.75rem;
+    align-self: center;
+    justify-self: center;
+
+    @include breakpoint-up(medium){
+        height: 29rem;
+        width: 21rem;
+    }
+    @include breakpoint-up(xlarge){
+        height: 33rem;
+        width: 23rem;
+    }
 }
 
 .loading-line {
@@ -18,6 +31,6 @@
     }
 
     100% {
-        width: 100%;
+        width: 80%;
     }
 }

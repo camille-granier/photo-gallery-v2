@@ -1,0 +1,23 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-line {
+    background-color: $black;
+    width: 0%;
+    height: .1rem;
+    z-index: 0;
+    animation: line 3s ease infinite;
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

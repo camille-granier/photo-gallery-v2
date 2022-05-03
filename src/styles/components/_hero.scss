@@ -87,14 +87,13 @@
     grid-row: 2;
     cursor: pointer;
     color: $black;
-    transform: translate(0,-100%);
+    transform: translate(0,-50%);
     @include breakpoint-up(medium){
         margin: 1.875rem;
     }
 }
 
 .right-arrow {
-  
     grid-column: 6;
 }
 
@@ -121,7 +120,7 @@
 }
 
 .loading-image {
-    animation: glow 1s ease infinite;
+    animation: glow 2s ease infinite;
 }
 
 @keyframes glow {

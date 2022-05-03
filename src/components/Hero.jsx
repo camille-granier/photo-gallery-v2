@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import Loader from './Loader';
 
 const Hero = ({loading}) => {
 
@@ -29,10 +30,8 @@ const Hero = ({loading}) => {
         <h1>Get inspired today</h1>
            <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
-          {(!photoRef.current && loading) && 
-          <div className='slide-active'>
-            <img className='loading-image' src='/assets/default.jpg' alt='default' />
-            </div>}
+           
+            <Loader />
            {picsData?.map((pic, index) => {
             return(
               <div className={ index === current ? 'slide-active' : 'slide' }

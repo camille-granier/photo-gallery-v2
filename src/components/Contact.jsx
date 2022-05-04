@@ -13,6 +13,10 @@ const Contact = () => {
         console.log(textVisible)
       });
       observer.observe(titleRef.current);
+
+      return () => {
+        observer.unobserve(titleRef.current)
+      };
     },[])
 
     return (

@@ -29,3 +29,12 @@
         width: 0%;
     }
 }
+
+@keyframes text-contact{
+    0%{
+        transform: translateY(70px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

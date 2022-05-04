@@ -10,9 +10,6 @@ const Hero = ({loading}) => {
   const [current, setCurrent] = useState(0);
   const photoRef = useRef();
 
-  console.log(photoRef.current)
-  console.log(loading)
-
   const nextSlide = () => {
     setCurrent(current === lengthPics - 1 ? 0 : current + 1);
     setLengthPics(picsData.length);

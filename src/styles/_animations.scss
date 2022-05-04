@@ -1,0 +1,31 @@
+@keyframes text{
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes text-large{
+    0%{
+        transform: translateX(-600px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+
+    50%{
+        width:80%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}

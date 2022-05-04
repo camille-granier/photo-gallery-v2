@@ -27,7 +27,9 @@ const Hero = ({loading}) => {
 
    return (
       <section className="hero">
-        <h1>Get inspired today</h1>
+        <span className='h1-mask'>
+          <h1>Get inspired today</h1>
+        </span>
            <div className='photo-slider'>
           <FiArrowLeft className='left-arrow arrow' onClick={prevSlide} />
            <Loader />

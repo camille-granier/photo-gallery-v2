@@ -46,6 +46,7 @@
                 animation: text-large 2s ease;
             
         }
+
     }
 }
 
@@ -64,9 +65,15 @@
     }
 
     @include breakpoint-up(large){
-        height: 200px;
-        width: 640px;
-        margin-left: 80px;
+        height: 12.5rem;
+        width: 40rem;
+        margin-left: 5rem;
+    }
+
+    @include breakpoint-up(xlarge){
+        height: 12.5rem;
+        width: 40rem;
+        margin-left: 8rem;
     }
 }
 

@@ -63,6 +63,7 @@
         display: flex;
         align-items: center;
         line-height: 1.1;
+        
     }
 
     .dev {
@@ -96,15 +97,15 @@
     transition: transform 0.4s ease;
 }
 
-.github-link:hover .github-link-container{
+.mask:hover .github-link-container{
     transform: translateY(-25px);
 }
 
-.github-link:hover .link-title-1 {
+.mask:hover .link-title-1 {
     transform: rotate(20deg);
 }
 
-.github-link:hover .link-title-2 {
+.mask:hover .link-title-2 {
     transform: rotate(0);
 }
 

@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: start;
 
     @include breakpoint-up(medium){
         padding: 5rem;
@@ -14,6 +15,7 @@
     @include breakpoint-up(large){
         padding: 5rem;
     }
+
 
     h2 {
         margin: 1.5rem 0;
@@ -25,6 +27,9 @@
         }
         @include breakpoint-up(large) {
             padding-top: 1rem;
+        }
+        @include breakpoint-up(xlarge) {
+            font-size: 120px;
         }
     }
 
@@ -40,6 +45,11 @@
 
         @include breakpoint-up(large){
             margin-top: 0;
+            height: auto;
+        }
+
+        @include breakpoint-up(xlarge){
+            margin-top: 10rem;
             height: auto;
         }
     }

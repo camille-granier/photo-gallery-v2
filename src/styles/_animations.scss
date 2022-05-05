@@ -38,3 +38,12 @@
         transform: translateY(0);
     }
 }
+
+@keyframes text-contact-large{
+    0%{
+        transform: translateX(400px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

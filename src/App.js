@@ -18,7 +18,7 @@ const App = () => {
 
   const getPictures = () => {
     axios
-       .get('http://localhost:5000/pictures')
+       .get('http://localhost:8000/pictures')
        .then((res) => {
          dispatch(setPicturesData(res.data));
           setIsLoading(false)});          

@@ -9,7 +9,7 @@ const Delete = ({id}) => {
     const dispatch = useDispatch();
 
     const handleDelete = () => {
-        axios.delete("http://localhost:5000/pictures/" + id).then(() => {
+        axios.delete("https://pictures-photo-gallery.herokuapp.com/api/picturespictures/" + id).then(() => {
             dispatch(deletePicture(id))
         });
     };

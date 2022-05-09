@@ -24,7 +24,7 @@ const Form = () => {
       id: newId
     };
 
-    axios.post('https://pictures-photo-gallery.herokuapp.com/api/pictures', data).then(() => {
+    axios.post('https://pictures-photo-gallery.herokuapp.com/pictures', data).then(() => {
       dispatch(addPicture(data))
       formRef.current.reset();
     });

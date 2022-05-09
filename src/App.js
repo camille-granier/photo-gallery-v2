@@ -18,7 +18,7 @@ const App = () => {
 
   const getPictures = () => {
     axios
-       .get('http://localhost:8000/pictures')
+       .get('https://pictures-photo-gallery.herokuapp.com/pictures')
        .then((res) => {
          dispatch(setPicturesData(res.data));
           setIsLoading(false)});          

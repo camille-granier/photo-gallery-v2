@@ -15,8 +15,10 @@ const Contact = () => {
       observer.observe(titleRef.current);
 
       return () => {
+          //eslint-disable-next-line
         observer.unobserve(titleRef.current)
       };
+      //eslint-disable-next-line
     },[])
 
     return (

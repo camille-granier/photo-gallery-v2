@@ -1,6 +1,7 @@
 .contact {
     background-color: $contact;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     font-family: $rosario;
     font-size: $font-md;
     padding: 1.25rem;

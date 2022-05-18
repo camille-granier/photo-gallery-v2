@@ -8,5 +8,5 @@ I used JSON server to fake a back end and redux toolkit to manage state.
 
 ### Hosting
 
-The app is hosted on [Heroku](https://pictures-photo-gallery.herokuapp.com/=
+The app is hosted on [Heroku](https://pictures-photo-gallery.herokuapp.com/)
 

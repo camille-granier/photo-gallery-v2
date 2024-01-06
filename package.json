@@ -22,7 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    
+    "dev": "set PORT=3000 && react-scripts start",
+    "open-browser": "start http://localhost:3000",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
